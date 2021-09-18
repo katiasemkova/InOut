@@ -1,0 +1,26 @@
+﻿@model InOut.Models.Expense
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" asp-action="Create">
+    <h1>Create new expense</h1>
+    <table>
+        <thead>
+            <tr >
+                <th width="50%">Expense name</th>
+                <th width="50%">Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td width="50%"><input asp-for="ExpenseName" /></td>
+                <td width="50%"><input asp-for="Amount" /></td>
+            </tr>
+            <tr >
+                <td width="50%"> <input type="submit" class="btn btn-danger" asp-action="Create" value="Save" /></td>
+                <td width="50%">  <a class="btn btn-success" asp-action="Index">Back</a></td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
