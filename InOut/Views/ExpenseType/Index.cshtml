@@ -1,5 +1,28 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<InOut.Models.Item>
 @{
+    ViewData["Title"] = "Index";
 }
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1>My Items</h1>
+        </div>
+        <div class="col-6 text-right">
+            <a class="btn btn-primary w-75" asp-controller="Item" asp-action="Create">Create new item</a>
+        </div>
+    </div>
+
+
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th width="25%"><label>Item Name</label></th>
+                <th width="25%"><label>Borrower</label></th>
+                <th width="25%"><label>Lender</label></th>
+                <th width="25%"><label>Changes</label></th>
+            </tr>
+        </thead>
+       
+    </table>
+</div>
+
